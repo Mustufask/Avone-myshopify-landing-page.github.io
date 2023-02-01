@@ -1,0 +1,194 @@
+ /* Global styling with pseudo elements selector */
+ 
+*, ::after, ::before {
+    box-sizing: border-box; /*Include padding and borders in elements total width*/
+    margin: 0;
+    padding: 0;
+}
+
+a {  /* For all hyperlinks text color and decoration */
+    color: var(--bs-link-color);
+    text-decoration: none;
+    color: #444;
+}
+
+
+/* Body */
+body {
+    background-color: #fff;
+    font-weight: 500;
+    font-size: 13px;
+    line-height: 1.4;
+    margin: 0;
+    padding: 0;
+    text-align: center;
+}
+
+
+/* Common styles for elements */
+.card-containers{        /* Common card-containers */
+    position: absolute;  /* Position related to the parent */
+    left: 50%;
+    transform: translate(-50%);
+    bottom: 30px;
+    right: 0;
+    padding: 20px;
+    text-align: center;
+    background-color: white;
+}
+
+.overlay-image {       /* overlay image for all devices related to the parent item */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay-image:hover {  /* transform effect */
+    transition: all 1s ease-out .2s; /* Animation for zoom */
+    transform: scale(1.1);
+}
+
+
+/* Header with pseudo class(hover) */
+.header-nav-link {
+    color: black;
+}
+
+.header-nav-link:hover {
+    color: palevioletred; /* for hovering on nav-link */
+}
+
+
+/* Main top Carousel */
+
+.carousel-indicators > button {     /* Carousel-indicators Round button for click event */
+    border-radius: 50%;
+    width: 18px !important;      /* used !important to override bootstrap classes  */
+    height: 18px !important;
+    background-color: white !important;
+}
+
+.carousel-item {       /* Carousel item parent */
+    position: relative;
+    min-height: 42rem;
+    background-color: #777;
+}
+
+.carousel-container-1-s {   /* slide 1 container for small and below devices related to carousel item */
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+}
+
+.carousel-container-1-md {   /* slide 1 container for medium and above devices related to carousel item */
+    position: absolute;
+    bottom: 190px;
+    right: 250px;
+}
+
+.carousel-container-2-s {    /* slide 2 container for small and below devices related to carousel item */
+    position: absolute;
+    bottom: 150px;
+    left: 0;
+    right: 0;
+}
+
+.carousel-container-2-md {    /* slide 2 container for medium and above devices related to carousel item */
+    position: absolute;
+    bottom: 190px;
+    left: 300px;
+}
+
+
+/* Main middle collection */
+.card-collection {   /* card collection parent element */
+    position: relative;  /* parent of common card container */
+    background-color: #777;
+    min-height: 23rem;
+}
+
+
+/* Main bottom */
+.free-shipping-card {       /* free shipping parent element */
+    position: relative;
+}
+
+.free-shipping-card::before {     /* free shipping pseudo element */
+    position: absolute;
+    content: '\f48b';         /* font awesome icon */
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 40px;
+    left: 13px;
+}
+
+.money-guarantee-card {       /* money guarantee parent element */
+    position: relative;
+}
+
+.money-guarantee-card::before {    /* money guarantee pseudo element */
+    position: absolute;
+    content: '\f0d6';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 40px;
+    left: 28px;
+    margin-left: -20px;
+}
+
+.online-support-card {       /* online support parent element */
+    position: relative;
+}
+
+.online-support-card::before {     /* online support pseudo element */
+    position: absolute;
+    content: '\f095';
+    font-family: 'Font Awesome 6 Free';
+    font-weight: 900;
+    font-size: 40px;
+    left: 39px;
+    margin-left: -20px;
+}
+
+
+/* Products bottom */
+.item {    /* Product bottom item */
+    position:relative;
+    display:inline-block;
+}
+
+.notify-badge{    /* notify-badge */
+    position: absolute;  /* position related to product bottom item */
+    top:2px;
+    background:rgb(255, 0, 174);
+    text-align: center;
+    color:white;
+    padding:5px;
+    margin:3px;
+    font-size: 11px;
+    text-transform: uppercase;
+    margin-bottom: 5px;
+    letter-spacing: 1;
+    white-space: nowrap;
+}
+
+.countdown{        /* Javascript countdown */
+    position: absolute;     /* position related to Product bottom item */
+    top:250px;
+    left: 40px;
+    text-align: center;
+    color:black;
+    font-size: 9px;
+    font-weight: bolder;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif ;
+    text-transform: uppercase;
+    letter-spacing: 6;
+    white-space: nowrap;
+}
+
+
