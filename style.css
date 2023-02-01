@@ -47,11 +47,6 @@ body {
     background-size: cover;
 }
 
-.overlay-image:hover {  /* transform effect */
-    transition: all 1s ease-out .2s; /* Animation for zoom */
-    transform: scale(1.1);
-}
-
 
 /* Header with pseudo class(hover) */
 .header-nav-link {
@@ -189,6 +184,22 @@ body {
     text-transform: uppercase;
     letter-spacing: 6;
     white-space: nowrap;
+}
+
+/* Collections */
+.overlay-image-1 {       /* overlay image for all devices related to the parent item */
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    top: 0;
+    background-position: center;
+    background-size: cover;
+}
+
+.overlay-image-1:hover {  /* transform effect */
+    transition: all 1s ease-out .2s; /* Animation for zoom */
+    transform: scale(1.1);
 }
 
 
